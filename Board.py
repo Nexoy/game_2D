@@ -13,11 +13,10 @@ class Board:
                 print("]", end="")
             print()
     def Reset(self):
-        for x in self.__board:
-            for y in x:
-                print("[", end="")
-                print(" ", end="")
-                print("]", end="")
-            print()
-    def SetPosition(self, char, x, y):
-        pass
+        self.__board = [
+                [' ',' ',' ',' '],
+                [' ',' ',' ',' '],
+                [' ',' ',' ',' '],
+                [' ',' ',' ',' ']]
+    def SetPosition(self, chr, x, y):
+        self.__board[x][y] = chr
